@@ -1,0 +1,22 @@
+Package: bezieR
+Type: Package
+Title: Analyze & Graph & animate SVG files
+Version: 0.1.0
+Author: Hussain Alsalman <Alsalman.hn@gmail.com>
+Maintainer: Hussain Alsalman <Alsalman.hn@gmail.com>
+Description: It parses SVG files then convert them into graphs and animation. It is an awesome pacakge.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    fs,
+    jsonlite,
+    magick,
+    magrittr,
+    processx,
+    rvest,
+    xml2,
+    yesno,
+    grid
+RoxygenNote: 7.1.0
