@@ -13,7 +13,7 @@ draw_base <- function(x_p, y_p, vp) {
   grid::pushViewport(vp)
   x <- x_p
   y <- y_p
-  if(length(x_p) > 4 || length(y_p) > 4 ) {
+  if(length(x_p) != 4) {
     # setting t values
     intr <- seq(0,1,0.01) # t value
 
