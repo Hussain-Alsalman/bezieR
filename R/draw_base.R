@@ -25,6 +25,8 @@ draw_base <- function(x_p, y_p, vp) {
     x_d <-x_cord(intr)
     y_d <- y_cord(intr)
     grid::grid.draw(grid::linesGrob(x =grid::unit(x_d, "native"), y = grid::unit(y_d, "native")))
+    grid::grid.draw(grid::pointsGrob(x = grid::unit(x, "native"),
+                                     y = grid::unit(y, "native") , gp = grid::gpar(col = "lightgray")))
   } else {
     grid::grid.bezier(x=grid::unit(x,"native"), y=grid::unit(y,"native"))
     grid::grid.draw(grid::pointsGrob(x = grid::unit(x, "native"),

@@ -21,16 +21,21 @@ make_recursive <- function() {
         s <- 1:length(tmp_list$x)
         s0 <- seq(length(tmp_list$x)-1)
         s1 <- s[-1]
+        colr <- colors()[(length(tmp_list$x)+1)*10]
+
         grid::grid.draw(grid::segmentsGrob(x0=grid::unit(tmp_list$x[s0], "native"),
                                      y0=grid::unit(tmp_list$y[s0],"native"),
                                      x1=grid::unit(tmp_list$x[s1],"native"),
                                      y1=grid::unit(tmp_list$y[s1],"native"),
-                                     gp= grid::gpar(col = colors()[(length(tmp_list$x)+1)*10])))
+                                     gp= grid::gpar(col = colr)))
+        grid::grid.draw(grid::pointsGrob(x= grid::unit(tmp_list$x[c(s0,s1)], "native"),
+                                         y = grid::unit(tmp_list$y[c(s0,s1)],"native"),
+                                         gp = grid::gpar(col = colr), pch = 20))
         Recall(tmp_list,ratio)} else
         {
           grid::grid.draw(grid::pointsGrob(x = grid::unit(tmp_list$x, "native"),
                                      y = grid::unit(tmp_list$y,"native"),
-                                     gp = grid::gpar(col = "red", pch = 19)))
+                                     gp = grid::gpar(col = "red"), pch = 19))
         }
     }
   }
