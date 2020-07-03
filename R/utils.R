@@ -4,8 +4,8 @@ get_dis <- function(xs, ys, ratio) {
   y_point <- rep(NA, length(ys)-1)
 
   for (n in 1:length(xs)-1) {
-    x_point[n]  <- xs[n+1]+(xs[n]-xs[n+1])*ratio
-    y_point[n] <- ys[n+1]+(ys[n]-ys[n+1])*ratio
+    x_point[n]  <- xs[n+1]+(xs[n]-xs[n+1])*(1-ratio)
+    y_point[n] <- ys[n+1]+(ys[n]-ys[n+1])*(1-ratio)
   }
   return(list("x" = x_point,"y"= y_point))
 }

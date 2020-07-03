@@ -60,7 +60,7 @@ pre_drawing <- function(x_min, x_max,y_min,y_max){
   grid::grid.newpage()
   vp <- grid::viewport(x = 0.5, y = 0.5,
                        just = c("center", "center"),
-                       height = 0.9, width = 0.9,
+                       height = 1, width = 1,
                        xscale = c(x_min, x_max), yscale =c(y_min,y_max))
   return(vp)
 }

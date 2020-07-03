@@ -4,7 +4,7 @@
 \alias{animate_bezier}
 \title{Animate bezier curves of any order}
 \usage{
-animate_bezier(cp_x, cp_y)
+animate_bezier(cp_x, cp_y, save = FALSE)
 }
 \arguments{
 \item{cp_x}{the x-axis coordinate of the control points}
