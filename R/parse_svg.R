@@ -20,7 +20,10 @@ parsed_svg <- function(path) {
   install_parser()
   }
   obj_svg <-xml2::read_xml(path)
-  svgs <- obj_svg %>% xml2::xml_children() %>% xml2::xml_children() %>% xml2::xml_attr("d")
+  obj_svg %>% xml2::xml_ns_strip()
+
+  svgs <- obj_svg %>% xml2::xml_find_all("//path") %>% xml2::xml_attr("d")
+
   df <- data.frame(code = character(0),
                    command = character(0),
                    x = numeric(0),
@@ -33,9 +36,6 @@ parsed_svg <- function(path) {
                    x2 = numeric(0),
                    y2 = numeric(0))
   for(i in 2:length(svgs)){
-    #node_call = paste0("node -e \"const {parseSVG, makeAbsolute} = require('./inst/node/node_modules/svg-path-parser'); var d='", svgs[i],
-     #                  "'; console.log(JSON.stringify(makeAbsolute(parseSVG(d))));\"")
-    #tmp_df <- system(node_call, intern = T) %>% jsonlite::fromJSON()
     tmp_df <- rparse_svg(svgs[i]) %>% jsonlite::fromJSON()
     df <- rbind(df,tmp_df)
   }
