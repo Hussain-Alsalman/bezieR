@@ -35,12 +35,12 @@ parsed_svg <- function(path) {
                    y1 = numeric(0),
                    x2 = numeric(0),
                    y2 = numeric(0))
-  for(i in 2:length(svgs)){
+  for(i in 1:length(svgs)){
     tmp_df <- rparse_svg(svgs[i]) %>% jsonlite::fromJSON()
     df <- rbind(df,tmp_df)
   }
   df[is.na.data.frame(df)] <- 0
-  df  <- df %>% filter(code== "C")
+  df  <- df %>% dplyr::filter(code== "C")
   df_xy <- df[,grep(pattern = '^[xy].*',value = TRUE,x =colnames(df) ,perl = TRUE)]
   return(df_xy)
 }
