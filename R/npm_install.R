@@ -5,7 +5,7 @@
 #' @return
 #'
 #' @examples
-#' @export
+#'
 #' @importFrom yesno yesno
 #' @importFrom processx run
 install_parser <- function(force = FALSE) {

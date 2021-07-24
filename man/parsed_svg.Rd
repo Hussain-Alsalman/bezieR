@@ -15,3 +15,7 @@ dataframe of the parsed SVG file
 \description{
 Parseing svg file
 }
+\examples{
+
+
+}

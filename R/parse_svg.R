@@ -6,7 +6,6 @@
 #'
 #'
 #' @examples
-#' @export
 #'
 #'
 #' @import magrittr

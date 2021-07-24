@@ -15,3 +15,6 @@ install_parser(force = FALSE)
 \description{
 install_parser
 }
+\examples{
+
+}

@@ -4,7 +4,7 @@
 #' @param svg
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 rparse_svg <- function(svg) {

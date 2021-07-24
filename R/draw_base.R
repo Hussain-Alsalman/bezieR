@@ -5,7 +5,7 @@
 #' @param vp  viewport passed to plot the drawing
 #'
 #'
-#' @export
+#'
 #'
 
 draw_base <- function(x_p, y_p, vp) {
