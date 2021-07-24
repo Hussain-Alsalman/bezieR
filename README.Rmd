@@ -18,9 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bezieR is to It helps visually analyze Bezier curves and animate their construct function of $f(t)$. It was inspired by [Wikipedia visualization] (https://en.wikipedia.org/wiki/B%C3%A9zier_curve#/media/File:B%C3%A9zier_2_big.gif)
+The goal of bezieR is to It helps visually analyze Bezier curves and animate their construct function of $f(t)$. It was inspired by [Wikipedia visualization](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#/media/File:B%C3%A9zier_2_big.gif)
 
-# BezieR
 `bezieR` is an R package designed for Bezier curves analysis. 
 
 ## Installation
@@ -35,7 +34,7 @@ devtools::install_github("Hussain-Alsalman/bezieR")
 
 This is a basic example which shows visualize the relationsip between the control points $P_n$of Bezier curve a common problem:
 
-```{r example}
+```{r example, fig.width=12, fig.height=8}
 library("bezieR")
 ## basic example code
 analyze_bezier(cp_x =c(10,20,30), cp_y = c(10,50,10))
@@ -53,6 +52,6 @@ You can read my detailed [blog post](https://www.arabiananalyst.com/2020/06/28/2
 
 # Resource 
 
-- The invaluable book by [@TheRealPomax](https://twitter.com/TheRealPomax)[A Primer on Bézier Curves](https://pomax.github.io/bezierinfo/)
-- [NodeJS with R Integration] (https://colinfay.me/node-r-package/)
+- The invaluable book by [TheRealPomax](https://twitter.com/TheRealPomax) [A Primer on Bézier Curves](https://pomax.github.io/bezierinfo/)
+- [NodeJS with R Integration](https://colinfay.me/node-r-package/)
 - [SVG Parser](https://github.com/hughsk/svg-path-parser)
